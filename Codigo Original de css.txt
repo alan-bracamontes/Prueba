@@ -1,0 +1,258 @@
+Codigo Original de css 
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas de navegación */
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.top-nav ul li a:hover {
+    color: #0071e3;
+}
+
+/* CÍRCULOS AL CENTRO */
+.nav-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff605c; }
+.yellow { background-color: #ffbd44; }
+.green { background-color: #00ca4e; }
+
+.frasek {
+    position: relative; /* La base será su posición normal */
+    top: 55px; /* Ajusta la altura según sea necesario */
+    left: 0;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+    width: fit-content;
+}
+
+
+
+/* Efecto de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste de contenedor para que se vea mejor */
+.container {
+    position: relative ;
+    top: -50px;
+    width: 80%;
+    max-width: 960px;
+    margin: 120px auto 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);/*FondoCuadrado*/
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+/*Animacion del texto borrado y escrito*/
+.container h1 {
+    font-size: 36px; /* Tamaño del texto */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border-right: 2px solid #333; /* Cursor que parpadea */
+    white-space: nowrap; /* No permite que el texto se parta */
+    overflow: hidden; /* Oculta el texto mientras se escribe */
+    text-align: center; /* Centra el texto */
+    margin: 20px auto; /* Centramos el texto horizontalmente */
+    width: 20ch; /* Asegura que haya espacio para 20 caracteres */
+    animation: typing 5s steps(20, end) infinite alternate, blink 0.6s step-end infinite;
+}
+
+/* Animación de escritura y borrado */
+@keyframes typing {
+    0% {
+        width: 0ch; /* Empieza sin texto */
+    }
+    50% {
+        width: 23ch; /* Se muestra todo el texto */
+    }
+    100% {
+        width: 0ch; /* Borra todo el texto */
+    }
+}
+
+/* Animación del cursor parpadeante */
+@keyframes blink {
+    from {
+        border-right-color: #333; /* Cursor visible */
+    }
+    to {
+        border-right-color: transparent; /* Cursor invisible */
+    }
+}
+
+/*Fin de la animacion de texto borrado y escrito*/
+
+/*Cambio del tamaño del parrafo*/
+.container p{
+    font-size: 19px;
+    border: 1px solid red;
+}
+
+
+#icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+/*iconos*/
+.iconos2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Separación de 10px */
+    margin-top: 20px;
+    border: 1px solid green;
+}
+
+.icons {
+    width: 40px;
+    height: 40px;
+    animation: pulse2 7s ease-in-out infinite;
+    border: 1px solid rgb(181, 212, 1);
+}
+@keyframes pulse2{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+/*fin iconos*/
+
+/* Botón sobre Mi */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #0071e3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005bb5;
+}
+/*Cambio del tamaño de letra Principal*/
+
+/*segundo boton de pdf */
+
+.btn-cv {
+    display: inline-block;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-cv:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.btn-cv:active {
+    background-color: rgb(255, 56, 86);
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+/*footer final*/
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer a {
+    color: #ff3856;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ff758c;
+}
+
+.cv-link {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
